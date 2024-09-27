@@ -1,0 +1,191 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    width: 620px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.calculators-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 添加这行以垂直居中对齐 */
+    gap: 10px; /* 减小间距 */
+}
+
+.calculator {
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 270px; /* 稍微减小宽度以适应新布局 */
+}
+
+.display {
+    margin-bottom: 10px;
+}
+
+.display input {
+    width: calc(100% ); /* 减去左右padding的宽度 */
+    padding: 10px;
+    font-size: 18px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box; /* 确保padding不会增加总宽度 */
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.1s;
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+button:active::after {
+    animation: ripple 0.4s ease-out;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.number {
+    background-color: #fff;
+    color: #333;
+}
+
+.operator {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.equals {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.clear {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.import-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 添加这行以垂直居中对齐 */
+    height: 100%; /* 使其与计算器等高 */
+}
+
+#importRight, #importLeft {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    height: auto; /* 移除固定高度 */
+    line-height: normal; /* 恢复正常行高 */
+}
+
+#importRight:hover {
+    background-color: #1976D2;
+}
+
+#importLeft:hover {
+    background-color: #1976D2;
+}
+
+.import-controls-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 改为space-between */
+    height: 200px; /* 设置一个固定高度 */
+    padding: 20px 0; /* 添加上下内边距 */
+}
+
+#importRight, #importLeft {
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#importRight:hover, #importLeft:hover {
+    background-color: #1976D2;
+}

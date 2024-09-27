@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双阶计算器插件</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>双阶计算器插件</h1>
+        
+        <div class="calculators-container">
+            <div class="calculator" id="calculator1">
+                <h2>计算器A</h2>
+                <div class="display">
+                    <input type="text" id="display1" readonly>
+                </div>
+                <div class="keypad">
+                    <button class="operator" data-value="sqrt">√</button>
+                    <button class="operator" data-value="^">x^y</button>
+                    <button class="operator" data-value="%">%</button>
+                    <button class="clear" id="clear1">C</button>
+                    
+                    <button class="number" data-value="7">7</button>
+                    <button class="number" data-value="8">8</button>
+                    <button class="number" data-value="9">9</button>
+                    <button class="operator" data-value="/">÷</button>
+                    
+                    <button class="number" data-value="4">4</button>
+                    <button class="number" data-value="5">5</button>
+                    <button class="number" data-value="6">6</button>
+                    <button class="operator" data-value="*">×</button>
+                    
+                    <button class="number" data-value="1">1</button>
+                    <button class="number" data-value="2">2</button>
+                    <button class="number" data-value="3">3</button>
+                    <button class="operator" data-value="-">-</button>
+                    
+                    <button class="number" data-value="0">0</button>
+                    <button class="number" data-value=".">.</button>
+                    <button class="equals" id="equals1">=</button>
+                    <button class="operator" data-value="+">+</button>
+                </div>
+            </div>
+
+            <div class="import-controls-container">
+                <div class="import-controls">
+                    <button id="importRight">>></button>
+                </div>
+                <div class="import-controls">
+                    <button id="importLeft"><<</button>
+                </div>
+            </div>
+
+            <div class="calculator" id="calculator2">
+                <h2>计算器B</h2>
+                <div class="display">
+                    <input type="text" id="display2" readonly>
+                </div>
+                <div class="keypad">
+                    <button class="operator" data-value="sqrt">√</button>
+                    <button class="operator" data-value="^">x^y</button>
+                    <button class="operator" data-value="%">%</button>
+                    <button class="clear" id="clear2">C</button>
+                    
+                    <button class="number" data-value="7">7</button>
+                    <button class="number" data-value="8">8</button>
+                    <button class="number" data-value="9">9</button>
+                    <button class="operator" data-value="/">÷</button>
+                    
+                    <button class="number" data-value="4">4</button>
+                    <button class="number" data-value="5">5</button>
+                    <button class="number" data-value="6">6</button>
+                    <button class="operator" data-value="*">×</button>
+                    
+                    <button class="number" data-value="1">1</button>
+                    <button class="number" data-value="2">2</button>
+                    <button class="number" data-value="3">3</button>
+                    <button class="operator" data-value="-">-</button>
+                    
+                    <button class="number" data-value="0">0</button>
+                    <button class="number" data-value=".">.</button>
+                    <button class="equals" id="equals2">=</button>
+                    <button class="operator" data-value="+">+</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
