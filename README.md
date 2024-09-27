@@ -6,7 +6,7 @@
 
 ## 界面预览
 
-![双阶计算器界面](calculator.png)
+![双阶计算器界面](/images/calculator.png)
 
 
 ## 功能特点
